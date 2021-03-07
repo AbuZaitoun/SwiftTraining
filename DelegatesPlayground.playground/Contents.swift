@@ -46,7 +46,7 @@ class MyClass {
     }
 }
 class Property {
-    unowned var myClass: MyClass?
+    weak var myClass: MyClass?
     var myStruct: MyStruct
     init(_ myClass: MyClass){
         self.myClass  = myClass
