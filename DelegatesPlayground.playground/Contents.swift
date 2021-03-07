@@ -33,3 +33,41 @@ let bakery = Bakery()
 bakery.delegate = shop
 
 bakery.makeCookie()
+
+
+
+
+// Tests:
+class MyClass {
+    var number: Int = 5
+    
+    deinit {
+        print("Dying")
+    }
+}
+class Property {
+    unowned var myClass: MyClass?
+    var myStruct: MyStruct
+    init(_ myClass: MyClass){
+        self.myClass  = myClass
+        self.myStruct = MyStruct()
+    }
+}
+struct MyStruct {
+    var number: Int = 5
+}
+
+var var1: MyClass? = MyClass()
+var prop = Property(var1!)
+var1 = nil
+print(prop.myClass?.number ?? "Oh uh")
+var var2 = var1
+var1?.number = 10
+var1 = nil
+var2 = nil
+print(var2?.number)
+
+var stru1 = MyStruct()
+var stru2 = stru1
+stru1.number = 10
+print(stru2.number)
