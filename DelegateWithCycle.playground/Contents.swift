@@ -24,5 +24,6 @@ class Receiver: SendDataDelegate {
     }()
 }
 
-var receiver = Receiver()
-receiver.sender
+var receiver: Receiver? = Receiver()
+receiver?.sender
+receiver = nil

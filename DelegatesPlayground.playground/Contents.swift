@@ -1,12 +1,12 @@
 import UIKit
 
-protocol BakeryDelegate {
-    func cookieWasBaked(_ cookie: Cookie)
-}
-
 struct Cookie {
     var size: Int = 5
     var hasChocolateChips: Bool = false
+}
+
+protocol BakeryDelegate {
+    func cookieWasBaked(_ cookie: Cookie)
 }
 
 class Bakery {
@@ -71,3 +71,12 @@ var stru1 = MyStruct()
 var stru2 = stru1
 stru1.number = 10
 print(stru2.number)
+
+
+var stepSize = 1
+
+func increment(_ number: inout Int) {
+    number += stepSize
+}
+
+increment(&stepSize)
