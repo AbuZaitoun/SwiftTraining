@@ -80,3 +80,8 @@ func increment(_ number: inout Int) {
 }
 
 increment(&stepSize)
+
+var completionHandlers = [() -> Void]()
+func someFunctionWithEscapingClosure(completionHandler: @escaping () -> Void) {
+    completionHandlers.append(completionHandler)
+}
