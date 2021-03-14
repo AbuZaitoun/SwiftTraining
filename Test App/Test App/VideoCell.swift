@@ -26,7 +26,7 @@ class VideoCell: UITableViewCell {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+
     func setVideo(video: Video) {
         videoImageView.image = video.image
         videoTitleLabel.text = video.name
